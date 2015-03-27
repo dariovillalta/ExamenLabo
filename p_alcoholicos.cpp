@@ -2,26 +2,22 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include "cliente.h"
 
-p_alcoholicos::p_alcoholicos(double volumen,double peso,double precio, double tasa, cliente miCliente)
-{
-    this->volumen=volumen;
-    this->peso=peso;
-    this->precio=precio;
-    this->tasa=tasa;
-    this->cliente;
+p_alcoholicos::p_alcoholicos(double volumen,double peso,double precio, double tasa, Cliente miCliente):
+    Productos(volumen, peso, precio, tasa, miCliente){
 }
 
 p_alcoholicos::~p_alcoholicos()
 {
 
 }
-string toString()const{
+string p_alcoholicos::toString()const{
     stringstream ss;
-           ss << productos::toString()<< " Impuesto: "<< getimpuesto();
+           ss << "Productos Alcoholicos" << Productos::toString()<< " Impuesto: "<< getimpuesto();
            return ss.str();
 }
-double getimpuesto()const{
-    return (getprecio()+getvolumen)*gettasa();
+double p_alcoholicos::getimpuesto()const{
+    return (getprecio()+getvolumen())*gettasa();
 }
 

@@ -10,6 +10,8 @@ using std::endl;
 
 Cliente::Cliente(string nombre): nombre(nombre){
 }
+Cliente::Cliente(){
+}
 Cliente::~Cliente(){
 }
 string Cliente::getNombre()const{
@@ -20,6 +22,6 @@ void Cliente::setNombre(string nombre){
 }
 string Cliente::toString()const{
 	stringstream ss;
-	ss << "Nombre: " << this->cliente;
+    ss << "Nombre: " << this->nombre;
 	return ss.str();
 }

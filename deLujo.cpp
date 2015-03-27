@@ -9,18 +9,18 @@ using std::stringstream;
 using std::cout;
 using std::endl;
 
-ProductoDeLujo::ProductoDeLujo(double volumen, double peso, double precio, double tasa Cliente cliente ): Productos(volumen, peso, precio, tasa, cliente){
+ProductoDeLujo::ProductoDeLujo(double volumen, double peso, double precio, double tasa, Cliente cliente ): Productos(volumen, peso, precio, tasa, cliente){
 	
 }
 ProductoDeLujo::~ProductoDeLujo(){
 }
-double ProductoDeLujo::cobrarImpuesto(){
+double ProductoDeLujo::getimpuesto()const{
 	double impuesto; 
 	impuesto = (this->peso * this->tasa) + (this->volumen * this->tasa);
 	return impuesto;
 }
-string ProductoDeLujo::toString(){
+string ProductoDeLujo::toString()const{
 	stringstream ss;
-	ss << "Prodeucto de Lujo: (" << Producto::toString() << ")";
+    ss << "Prodeucto de Lujo: (" << Productos::toString() << " Impuesto: "<< getimpuesto();
 	return ss.str();
 }

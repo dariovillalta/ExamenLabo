@@ -6,18 +6,20 @@
 
 class Productos
 {
+protected:
     double volumen;
     double peso;
-    cliente cliente;
+    Cliente cliente;
     double precio;
     double tasa;
 
 public:
-    Productos(double,double,double,double,cliente);
+    Productos(double,double,double,double,Cliente);
     ~Productos();
     virtual string toString()const;
     virtual double getimpuesto()const=0;
-    cliente getcliente()const;
+    Cliente getcliente()const;
+    string getNombre()const;
     double getpeso()const;
     double getprecio()const;
     double getvolumen()const;

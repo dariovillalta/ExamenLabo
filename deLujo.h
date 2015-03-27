@@ -1,10 +1,10 @@
 #pragma once
 #include "productos.h"
 
-class ProductoDeLujo: Public Productos{
+class ProductoDeLujo: public Productos{
 public:
 	ProductoDeLujo(double, double, double, double, Cliente);
 	~ProductoDeLujo();
-	virtual double cobrarImpuesto();
+    virtual double getimpuesto()const;
 	virtual string toString()const;
 };

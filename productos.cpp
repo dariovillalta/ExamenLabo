@@ -1,16 +1,19 @@
 #include "productos.h"
+#include "cliente.h"
 #include <string>
 #include <iostream>
 #include <sstream>
 
-Productos::Productos(double volumen,double peso,double precio, double tasa, cliente cliente)
+using namespace std;
+
+Productos::Productos(double volumen,double peso,double precio, double tasa, Cliente cliente)
 
 {
     this->volumen=volumen;
     this->peso=peso;
     this->precio=precio;
     this->tasa=tasa;
-    this->cliente;
+    this->cliente = cliente;
 
 }
 
@@ -20,11 +23,11 @@ Productos::~Productos()
 }
 string Productos::toString()const{
      stringstream ss;
-            ss << "Cliente: " <<cliente <<  " ,volumen: " << volumen <<" Precio "<<precio<< " Peso: " <<peso<< " Tasa: "<< tasa;
+            ss << "Cliente: " <<this->getcliente().toString() <<  " ,volumen: " << volumen <<" Precio "<<precio<< " Peso: " <<peso<< " Tasa: "<< tasa;
             return ss.str();
 }
 
-cliente Productos::getcliente()const{
+Cliente Productos::getcliente()const{
     return cliente;
 }
 double Productos::getpeso()const{
@@ -38,4 +41,7 @@ double Productos::getvolumen()const{
 }
 double Productos::gettasa()const{
     return tasa;
+}
+string Productos::getNombre()const{
+    return this->cliente.getNombre();
 }
