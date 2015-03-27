@@ -17,13 +17,19 @@ SOURCES += main.cpp\
     productos.cpp \
     p_alcoholicos.cpp \
     agregar.cpp \
-    agregar_cliente.cpp
+    agregar_cliente.cpp \
+    p_educativo.cpp \
+    deLujo.cpp \
+    cliente.cpp
 
 HEADERS  += mainwindow.h \
     productos.h \
     p_alcoholicos.h \
     agregar.h \
-    agregar_cliente.h
+    agregar_cliente.h \
+    p_educativo.h \
+    deLujo.h \
+    cliente.h
 
 FORMS    += mainwindow.ui \
     agregar.ui \

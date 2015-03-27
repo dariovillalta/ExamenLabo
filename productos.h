@@ -1,6 +1,7 @@
 #ifndef PRODUCTOS_H
 #define PRODUCTOS_H
-#include "cliente"
+
+#include "cliente.h"
 
 
 class Productos

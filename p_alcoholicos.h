@@ -1,6 +1,6 @@
 #ifndef P_ALCOHOLICOS_H
 #define P_ALCOHOLICOS_H
-#include "cliente"
+#include "cliente.h"
 using namespace std;
 
 

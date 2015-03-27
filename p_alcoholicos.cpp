@@ -3,7 +3,7 @@
 #include <iostream>
 #include <sstream>
 
-p_alcoholicos::p_alcoholicos(double volumen,double peso,double precio, double tasa, cliente cliente)
+p_alcoholicos::p_alcoholicos(double volumen,double peso,double precio, double tasa, cliente miCliente)
 {
     this->volumen=volumen;
     this->peso=peso;
