@@ -15,10 +15,16 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     productos.cpp \
-    p_alcoholicos.cpp
+    p_alcoholicos.cpp \
+    agregar.cpp \
+    agregar_cliente.cpp
 
 HEADERS  += mainwindow.h \
     productos.h \
-    p_alcoholicos.h
+    p_alcoholicos.h \
+    agregar.h \
+    agregar_cliente.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    agregar.ui \
+    agregar_cliente.ui
